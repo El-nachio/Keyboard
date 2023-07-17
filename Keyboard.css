@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #00daba;
+}
+
+#container {
+  display: grid;
+  grid-template-rows: 0.25fr 1fr 0.25fr;
+  grid-template-areas: "fN" "alphanumeric" "backfile";
+  justify-content: center;
+  background-color: #b5afaf;
+  border: 5px solid #b5afaf;
+  box-shadow: 10px 10px 10px 3px black;
+}
+#container #fN, #container #alphanumeric, #container #backfile {
+  position: relative;
+}
+
+#fN {
+  grid-area: fN;
+}
+#fN span, #fN ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+#alphanumeric {
+  grid-area: alphanumeric;
+  display: flex;
+}
+#alphanumeric ul span {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+#alphanumeric .backspace {
+  width: 130px;
+}
+#alphanumeric .enter {
+  width: 140px;
+}
+#alphanumeric .tab, #alphanumeric .up-enter {
+  width: 95px;
+}
+#alphanumeric .caps {
+  width: 110px;
+}
+#alphanumeric .shift {
+  width: 150px;
+}
+
+#backfile {
+  grid-area: backfile;
+}
+#backfile li {
+  width: 90px;
+}
+#backfile ul {
+  display: flex;
+  flex-wrap: nowrap;
+}
+#backfile .space {
+  width: 430px;
+}
+
+ul {
+  width: 100%;
+  list-style-type: none;
+  justify-content: center;
+}
+
+@keyframes trembling {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  50% {
+    transform: scale(5px);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}
+li {
+  text-align: center;
+  box-shadow: 0px 6px 2px 2px black;
+  margin: 0 5px 7px 5px;
+  height: 65px;
+  width: 65px;
+  background-color: black;
+  color: rgb(255, 0, 217);
+  border-right: 0.25px solid;
+  border-bottom: 0.25px solid;
+  border-radius: 5px;
+  transition: 0.25s;
+  font-family: "Oswald", sans-serif;
+}
+
+li:hover {
+  border-color: rgb(30, 21, 232);
+  color: rgb(30, 21, 232);
+}
+
+@media (max-width: 480px) {
+  html {
+    width: 100vw;
+  }
+  #container {
+    width: 80vw;
+  }
+  #container div {
+    width: 80vw;
+  }
+  #fN ul {
+    width: 80vw;
+  }
+  li {
+    width: 30px;
+    height: 30px;
+  }
+  ul {
+    width: 50%;
+  }
+}/*# sourceMappingURL=Keyboard.css.map */
